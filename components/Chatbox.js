@@ -29,7 +29,7 @@ export default function Chatbox() {
   }, [messages]);
 
   return (
-    <div className="flex flex-col h-screen w-full items-center justify-center bg-accent">
+    <div className="flex flex-col h-screen w-full items-center justify-center bg-base-100">
       <div
         ref={chatboxRef}
         className="flex flex-col max-w-md w-full h-5/6 p-4 bg-base-100 rounded-box shadow-lg overflow-y-auto"
@@ -56,7 +56,7 @@ export default function Chatbox() {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
           className="input input-bordered flex-grow mr-2 max-w-md"
-          placeholder="Type a message"
+          placeholder="Ask me"
           style={{ width: "100%" }}
         />
         <button onClick={sendMessage} className="btn btn-primary">
